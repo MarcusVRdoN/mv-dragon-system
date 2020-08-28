@@ -1,0 +1,25 @@
+@import './styles/base';
+
+body {
+  background-color: $background-body;
+  font-size: $font-size;
+  color: $text-color;
+}
+
+#root {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.title {
+  font-size: $title-1;
+
+  &__large {
+    font-size: $title-large;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.sidebar {
+  background-color: $primary;
+  width: 250px;
+  min-height: 100vh;
+  color: $secundary;
+  padding: 0 30px;
+}

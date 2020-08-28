@@ -1,0 +1,12 @@
+$primary: #e54352;
+$secundary: #fff;
+$text-color: #2a2a2a;
+$text-color-light: lighten($text-color, 50%);
+$text-color-primary: $primary;
+$text-color-secundary: $secundary;
+$background-body: #f5f5f5;
+$font-size: 16px;
+$title-1: 2rem;
+$title-2: 1.625rem;
+$title-large: 2.25rem;
+$shadow-color: rgba($text-color-light, .33);
