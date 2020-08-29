@@ -4,4 +4,9 @@
   display: flex;
   min-height: 450px;
   flex: 8;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }

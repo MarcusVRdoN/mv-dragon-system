@@ -1,4 +1,5 @@
 @import './styles/base';
+@import "toastr";
 
 body {
   background-color: $background-body;
@@ -18,8 +19,32 @@ body {
 
 .title {
   font-size: $title-1;
+  font-weight: 400;
 
-  &__large {
+  &--large {
     font-size: $title-large;
+  }
+}
+
+.box {
+  background-color: $secundary;
+  box-shadow: 0 0px 5px $shadow-color, 0 2px 0px $shadow-color;
+}
+
+.button-icon {
+  background-color: $shadow-color;
+  font-size: 1.25em;
+  padding: 7.5px;
+  margin-right: 7.5px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $primary-dark;
+    color: $secundary;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }

@@ -1,10 +1,12 @@
 import React from 'react'
 import './main.scss'
 
-function Main() {
+function Main({ children }) {
   return (
     <main className="main">
-      Teste
+      <div className="container">
+        {children}
+      </div>
     </main>
   )
 }

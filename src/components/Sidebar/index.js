@@ -1,7 +1,7 @@
 import React from 'react'
 import './sidebar.scss'
 
-function sidebar() {
+function Sidebar() {
   return (
     <aside className="sidebar">
       <h1>MV Dragon System</h1>
@@ -16,4 +16,4 @@ function sidebar() {
   )
 }
 
-export default sidebar
+export default Sidebar

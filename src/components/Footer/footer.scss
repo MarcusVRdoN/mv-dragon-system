@@ -2,10 +2,21 @@
 
 .footer {
   width: 100%;
-  flex: 1;
+  font-size: 0.9em;
   align-items: center;
   justify-content: flex-end;
-  background-color: #fff;
+
+  &__container {
+    padding: 10px;
+  }
+
+  p {
+    margin: 0 0 5px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 
   svg {
     vertical-align: bottom;
