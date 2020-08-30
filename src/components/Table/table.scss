@@ -1,12 +1,47 @@
 @import '../../styles/variables';
+@import '../../styles/utils';
 
 table {
   font-size: 0.9em;
   margin-bottom: 2rem;
   border-collapse: collapse;
 
+  &.vertical {
+    display: flex;
+
+    thead {
+      flex: 1;
+    }
+
+    tbody {
+      flex: 3;
+
+      td {
+        height: 38.48px;
+        padding: 0;
+      }
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+
+    th,
+    td {
+      display: flex;
+      align-items: center;
+      padding-left: 1em;
+      box-shadow: -1px 1px 0 $shadow-color;
+
+      &:last-child {
+        box-shadow: -1px 0 0 $shadow-color;
+      }
+    }
+  }
+
   thead {
-    font-size: 0.9em;
+    font-size: 0.85em;
     font-weight: bold;
     color: $text-color-light;
     text-align: left;
@@ -15,10 +50,26 @@ table {
 
     th {
       padding: 1em 0;
+
+      svg {
+        transform: translate(0.5em, 0.2em) scale(1);
+      }
+
+      .u-clickable {
+        &:hover {
+          color: $text-color;
+        }
+      }
     }
   }
 
   tbody {
+    tr {
+      &:hover {
+        background-color: rgba(0, 0, 0, .033);
+      }
+    }
+
     td {
       padding: 0.75em 0;
 
@@ -31,9 +82,40 @@ table {
   th,
   td {
     box-shadow: 0 1px 0px $shadow-color;
+    overflow: hidden;
 
     &:first-child {
       padding-left: 1em;
     }
+  }
+
+  input {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 1em;
+    border: none;
+    outline: 0;
+  }
+}
+
+.button-icon {
+  background-color: $shadow-color;
+  font-size: 1.25em;
+  padding: 7.5px;
+  margin-right: 7.5px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover {
+    @extend .t-primary--hover;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a > & {
+    margin-right: 7.5px !important;
   }
 }

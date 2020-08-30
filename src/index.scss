@@ -1,4 +1,5 @@
 @import './styles/base';
+@import './styles/utils';
 @import "toastr";
 
 body {
@@ -28,23 +29,17 @@ body {
 
 .box {
   background-color: $secundary;
-  box-shadow: 0 0px 5px $shadow-color, 0 2px 0px $shadow-color;
+  @extend .u-shadows;
 }
 
-.button-icon {
-  background-color: $shadow-color;
-  font-size: 1.25em;
-  padding: 7.5px;
-  margin-right: 7.5px;
-  cursor: pointer;
-  border-radius: 50%;
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  &:hover {
-    background-color: $primary-dark;
-    color: $secundary;
-  }
-
-  &:last-child {
-    margin-right: 0;
+input {
+  &:disabled {
+    background-color: transparent;
+    color: $text-color-light;
   }
 }

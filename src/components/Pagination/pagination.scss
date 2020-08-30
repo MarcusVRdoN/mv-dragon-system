@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+@import '../../styles/utils';
+
+.pagination {
+  margin-bottom: 60px;
+  @extend .u-align-center;
+  @extend .u-justify-center;
+
+  .button {
+    font-size: 0.8em;
+    padding: 0.8em;
+    border-radius: 50%;
+    width: 35.1px;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  &__records-per-page,
+  &__total-items {
+    font-size: 0.85em;
+    color: $text-color-light !important;
+
+    em,
+    select {
+      font-style: normal;
+      font-weight: 400;
+      color: $primary;
+      margin-left: 0.25em;
+    }
+
+    select {
+      background: transparent;
+      cursor: pointer;
+      border: none;
+      outline: 0;
+    }
+  }
+}

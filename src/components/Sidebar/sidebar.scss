@@ -1,9 +1,38 @@
 @import '../../styles/variables';
+@import '../../styles/utils';
 
 .sidebar {
   background-color: $primary;
   width: 250px;
   min-height: 100vh;
   color: $secundary;
-  padding: 0 30px;
+  
+  h1,
+  a {
+    padding: 0 30px;
+  }
+
+  li {
+    overflow: hidden;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      line-height: 1.5;
+  
+      &:hover {
+        @extend .t-primary--hover
+      }
+
+      svg {
+        font-size: 1.5em;
+        margin-right: 0.5em;
+        vertical-align: sub;
+      }
+    }
+  }
 }

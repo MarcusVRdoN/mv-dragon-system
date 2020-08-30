@@ -2,13 +2,48 @@
 
 .t-primary {
   color: $primary;
+
+  &--hover {
+    background-color: $primary-dark;
+    color: $secundary;
+  }
 }
 
 .u-text-center {
   text-align: center;
 }
 
+.u-text-right {
+  text-align: right;
+}
+
+.u-margin-none {
+  margin: 0 !important;
+}
+
+.u-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.u-justify-center {
+  display: flex;
+  justify-content: space-between;
+}
+
+.u-clickable {
+  cursor: pointer;
+}
+
+.u-shadows {
+  box-shadow: 0 0px 5px $shadow-color, 0 2px 0px $shadow-color;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
 .js-disabled {
-  opacity: 0.4;
+  opacity: 0.5;
   pointer-events: none;
 }

@@ -1,2 +1,9 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+export default {
+  home: '/',
+  login: '/login',
+  dragons: {
+    list: '/dragons',
+    create: '/dragons/create',
+    edit: '/dragons/:id/edit'
+  }
+}

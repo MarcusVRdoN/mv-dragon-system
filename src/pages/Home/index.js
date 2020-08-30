@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Page from '../../components/Page'
-import DragonsList from '../../components/DragonsList';
 
 function Home() {
   return (
     <Page>
-      <h1 className="title title--large">Dragões</h1>
-      <DragonsList order="desc" />
+      <h1 className="title title--large">Home</h1>
     </Page>
   )
 }
