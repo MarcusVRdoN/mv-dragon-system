@@ -11,9 +11,7 @@ function Home() {
           Esta aplicação foi desenvolvida para que você possa <strong>criar e gerenciar os seus próprios dragões</strong>.<br />
           A ideia desta aplicação é demonstrar os conhecimentos do desenvolvedor com as principais <em>stacks</em> do <em>front-end</em>, utilizando o framework reativo <strong><em>React</em></strong>.
         </p>
-        <p>
-          Aqui você poderá:
-        </p>
+        <p>Aqui você poderá:</p>
         <ul>
           <li>Listar todos os dragões cadastrados;</li>
           <li>Alterar as informações de algum dragão;</li>
