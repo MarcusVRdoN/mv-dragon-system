@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { getDragon, updateDragon } from '../../services/apiDragons'
 import Table from '../Table'
 import Button from '../Button'
 import routes from '../../routes'
 
-function DragonsDetail({ id }) {
+function DragonsDetail({ id, readOnly }) {
   const tableHeaders = ['Nome', 'Tipo', 'Data de criação']
   const dateOptions = ['pt-BR', { year: 'numeric', month: 'long', day: 'numeric' }]
   
   const [dragon, setDragon] = useState(null)
+  const history = useHistory()
 
   const loadData = async () => {
     const data = await getDragon(id)
@@ -21,7 +22,7 @@ function DragonsDetail({ id }) {
   }
   const updateData = async () => {
     await updateDragon(id, dragon)
-    window.history.back()
+    history.push(routes.dragons.list)
   }
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function DragonsDetail({ id }) {
       <Table className="vertical" headers={tableHeaders}>
         {
           dragon && (
-            <tr>
+            <tr className={readOnly ? 'read-only' : ''}>
               <td>
                 <input type="text" name="name" value={dragon.name} onChange={handle} />
               </td>
@@ -49,9 +50,9 @@ function DragonsDetail({ id }) {
       </Table>
       <div className="u-text-right">
         <Link to={routes.dragons.list}>
-          <Button className="secundary">Cancelar</Button>
+          <Button className="secundary">{readOnly ? 'Voltar' : 'Cancelar'}</Button>
         </Link>
-        <Button className="primary" onClick={updateData}>Salvar</Button>
+        {!readOnly && <Button className="primary" onClick={updateData}>Salvar</Button>}
       </div>
     </>
   )

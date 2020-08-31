@@ -2,11 +2,11 @@ import React from 'react'
 
 import './button.scss'
 
-function Button({ className, icon, onClick, children }) {
+function Button({ className, type = 'button', onClick, children }) {
   const extraClasses = className || ''
 
   return (
-    <button className={`button ${extraClasses}`} type="button" onClick={onClick}>
+    <button className={`button ${extraClasses}`} type={type} onClick={onClick}>
       {children}
     </button>
   )

@@ -18,13 +18,13 @@ function Pagination({ perPage, pages, currentPage, totalItems, onChange, onClick
         </select>
       </div>
       <div className={`pagination__pages ${numberPages < 2 ? 'u-invisible' : ''}`}>
-        <Button className={`button-icon ${currentPage == 1 ? 'js-disabled' : ''}`} onClick={prevPage}><AiOutlineLeft /></Button>
+        <Button className={`button-icon ${currentPage === 1 ? 'js-disabled' : ''}`} onClick={prevPage}><AiOutlineLeft /></Button>
         {
           pages && numberPages.map((page, index) => (
-            <Button key={index} className={`button-icon ${currentPage == ++index ? 'is-active' : ''}`} onClick={onClick}>{page + 1}</Button>
+            <Button key={index} className={`button-icon ${currentPage === ++index ? 'is-active' : ''}`} onClick={onClick}>{page + 1}</Button>
           ))
         }
-        <Button className={`button-icon ${currentPage == pages ? 'js-disabled' : ''}`} onClick={nextPage}><AiOutlineRight /></Button>
+        <Button className={`button-icon ${currentPage === pages ? 'js-disabled' : ''}`} onClick={nextPage}><AiOutlineRight /></Button>
       </div>
       <div className="pagination__total-items">
         Total de itens: <em>{totalItems}</em>

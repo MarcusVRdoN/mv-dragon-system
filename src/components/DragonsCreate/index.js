@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { createDragon } from '../../services/apiDragons'
 import Table from '../Table'
 import Button from '../Button'
@@ -7,8 +7,9 @@ import routes from '../../routes'
 
 function DragonsCreate() {
   const tableHeaders = ['Nome', 'Tipo']
-  
+
   const [dragon, setDragon] = useState({ name: '', type: '', createdAt: new Date() })
+  const history = useHistory()
 
   const handle = ({ target }) => {
     const { name, value } = target
@@ -16,7 +17,7 @@ function DragonsCreate() {
   }
   const createData = async () => {
     await createDragon(dragon)
-    window.history.back()
+    history.push(routes.dragons.list)
   }
 
   return (

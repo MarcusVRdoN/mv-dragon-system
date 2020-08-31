@@ -1,6 +1,7 @@
 $primary: #e54352;
 $primary-dark: darken($primary, 10%);
 $secundary: #fff;
+$secundary-dark: darken($secundary, 5%);
 $text-color: #2a2a2a;
 $text-color-light: lighten($text-color, 50%);
 $text-color-primary: $primary;
@@ -11,3 +12,4 @@ $title-1: 2rem;
 $title-2: 1.625rem;
 $title-large: 2.25rem;
 $shadow-color: rgba($text-color-light, .33);
+$media-query-tablet: 768px;

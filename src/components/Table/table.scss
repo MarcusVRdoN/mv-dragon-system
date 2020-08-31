@@ -11,14 +11,28 @@ table {
 
     thead {
       flex: 1;
+
+      th {
+        text-align: left;
+      }
     }
 
     tbody {
       flex: 3;
 
+      tr {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
       td {
-        height: 38.48px;
+        height: 42.6px;
         padding: 0;
+
+        &:hover:not([disabled]) {
+          background-color: rgba(0, 0, 0, .033);
+        }
       }
     }
 
@@ -68,10 +82,24 @@ table {
       &:hover {
         background-color: rgba(0, 0, 0, .033);
       }
+
+      &.read-only {
+        td {
+          input {
+            color: $text-color-light;
+          }
+        }
+      }
     }
 
     td {
       padding: 0.75em 0;
+
+      &:first-child {
+        a {
+          color: $primary;
+        }
+      }
 
       &:not(:first-child) {
         color: $text-color-light;
@@ -96,6 +124,71 @@ table {
     padding-left: 1em;
     border: none;
     outline: 0;
+  }
+
+  @media (max-width: $media-query-tablet) {
+    box-shadow: none;
+
+    tbody,
+    tr,
+    td {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &:not(.vertical) {
+      thead {
+        tr {
+          margin-bottom: 15px;
+          box-shadow: 0 0px 5px $shadow-color, 0 2px 0px $shadow-color, 0 15px $background-body;
+        }
+      }
+  
+      tbody {
+        tr {
+          margin-bottom: 15px;
+          box-shadow: 0 0px 5px $shadow-color, 0 2px 0px $shadow-color, 0 15px $background-body;
+    
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+  
+        td {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+  
+          &:last-child {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    &.vertical {
+      thead {
+        box-shadow: none;
+      }
+      
+      tbody {
+        flex: 3;
+
+        td {
+          padding: 0;
+
+          &:last-child {
+            box-shadow: 0 1px 0px #ffffff;
+          }
+        }
+      }
+
+      th,
+      td {
+        box-shadow: 0 1px 0px $shadow-color;
+      }
+    }
   }
 }
 

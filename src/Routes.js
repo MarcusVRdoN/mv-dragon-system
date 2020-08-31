@@ -4,6 +4,8 @@ export default {
   dragons: {
     list: '/dragons',
     create: '/dragons/create',
+    read: '/dragons/:id',
     edit: '/dragons/:id/edit'
-  }
+  },
+  logout: '/logout',
 }

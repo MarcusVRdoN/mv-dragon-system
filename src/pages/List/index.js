@@ -8,9 +8,9 @@ import routes from '../../routes'
 function List() {
   return (
     <Page>
-      <div className="u-align-center u-justify-center">
-        <h1 className="title title--large">Dragões</h1>
-        <Link className="u-margin-none" to={routes.dragons.create}>
+      <div className="u-align-center u-justify-center u-mobile-column">
+        <h1 className="title title--large u-mobile-margin-bottom-small">Dragões</h1>
+        <Link className="u-margin-top u-mobile-margin-none u-mobile-margin-bottom-big" to={routes.dragons.create}>
           <Button className="primary">Adicionar Dragão</Button>
         </Link>
       </div>

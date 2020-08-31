@@ -3,7 +3,7 @@ import './main.scss'
 
 function Main({ children }) {
   return (
-    <main className="main">
+    <main className="main fade-in-up">
       <div className="container">
         {children}
       </div>

@@ -1,15 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+
+import Button from '../Button'
+import { UserContext } from '../../context/UserContext'
+import { MenuContext } from '../../context/MenuContext'
 
 import './header.scss'
 
 function Header() {
+  const context = useContext(UserContext)
+  const { active, toggleMenu } = useContext(MenuContext)
+
   return (
     <header className="header">
-      <div className="header__title">Teste</div>
-      <div className="header__search">Teste</div>
-      <div className="header__account">
-        <Link to="/login">Login</Link>
+      <Button className={`hamburger hamburger--spin t-primary u-only-mobile ${active ? 'is-active' : ''}`} onClick={toggleMenu}>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </Button>
+      <div className="header__column header__account">
+        <span>Olá, {context.user.name}</span>
+        <img src={context.user.avatar} alt={`Avatar de ${context.user.name}`}/>
       </div>
     </header>
   )

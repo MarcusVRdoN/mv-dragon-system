@@ -3,9 +3,18 @@
 
 .sidebar {
   background-color: $primary;
-  width: 250px;
+  width: 15vw;
+  min-width: 245px;
   min-height: 100vh;
   color: $secundary;
+
+  &__logo {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 24px 20px;
+    margin: 0 auto;
+  }
   
   h1,
   a {
@@ -24,8 +33,13 @@
       padding-bottom: 20px;
       line-height: 1.5;
   
-      &:hover {
+      &:hover,
+      &.active {
         @extend .t-primary--hover
+      }
+
+      &.active {
+        border-left: 5px solid $secundary;
       }
 
       svg {
@@ -33,6 +47,33 @@
         margin-right: 0.5em;
         vertical-align: sub;
       }
+    }
+  }
+
+  @media (max-width: $media-query-tablet) {
+    position: fixed;
+    width: 320px;
+    transition: all .3s;
+    transform: translateX(-100%);
+    z-index: 1;
+
+    &.is-active {
+      transform: translateX(0);
+    }
+
+    &__logo {
+      position: absolute;
+      width: 80%;
+      bottom: 0;
+      left: 0
+    }
+
+    h1 {
+      margin-top: 75px;
+    }
+
+    nav {
+      margin-top: 65px;
     }
   }
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai'
 
 import { getDragons, deleteDragons } from '../../services/apiDragons'
-import { sortByProp, chunkCount, chunk } from '../../utils'
+import { sortByProp, chunkCount, chunk } from '../../helpers'
 
 import Table from '../Table'
 import Pagination from '../Pagination'
@@ -66,7 +66,11 @@ function DragonsList({ order }) {
         {
           dragons && dragons.map(dragon => (
             <tr key={dragon.id}>
-              <td>{dragon.name}</td>
+              <td>
+                <Link to={`/dragons/${dragon.id}`}>
+                  {dragon.name}
+                </Link>
+              </td>
               <td>{dragon.type}</td>
               <td>
                 {new Intl.DateTimeFormat(...dateOptions).format(new Date(dragon.createdAt))}

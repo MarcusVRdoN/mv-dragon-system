@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+@import '../../styles/utils';
+
+.login {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+
+  &__container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
+  }
+
+  &__form {
+    background-color: $secundary;
+    padding: 30px 30px 20px 30px;
+    @extend .u-shadows;
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__column {
+      text-align: right;
+    }
+
+    &__label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    &__input {
+      background-color: $background-body;
+      padding: 7.5px;
+      margin-bottom: 25px;
+      border: 1px solid $shadow-color;
+
+      &:focus {
+        border: 1px solid $shadow-color;
+        outline: 0;
+      }
+    }
+  }
+
+  .title {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+  }
+}

@@ -1,14 +1,17 @@
 @import './normalize';
 @import './variables';
 @import './utils';
+@import './animations';
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
 ::-webkit-input-placeholder {
+  font-size: 0.9em;
   font-style: italic;
   font-weight: 300;
   text-transform: normal !important;
@@ -17,6 +20,7 @@ body {
   transition: all 0.2s;
 }
 ::-moz-placeholder {
+  font-size: 0.9em;
   font-style: italic;
   font-weight: 300;
   text-transform: normal !important;
@@ -25,6 +29,7 @@ body {
   transition: all 0.2s;
 }
 :-ms-input-placeholder {
+  font-size: 0.9em;
   font-style: italic;
   font-weight: 300;
   text-transform: normal !important;
