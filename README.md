@@ -17,5 +17,5 @@ Aqui você poderá:
 
 ### Usuário para login
 
-> E-mail: teste@teste.com
+> E-mail: teste@teste.com<br>
 > Senha: teste123
