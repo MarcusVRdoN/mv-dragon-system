@@ -8,6 +8,7 @@ import routes from '../../routes'
 function DragonsDetail({ id, readOnly }) {
   const tableHeaders = ['Nome', 'Tipo', 'Data de criação']
   const dateOptions = ['pt-BR', { year: 'numeric', month: 'long', day: 'numeric' }]
+  const disabled = readOnly ? { disabled: true } : ''
   
   const [dragon, setDragon] = useState(null)
   const history = useHistory()
@@ -36,10 +37,10 @@ function DragonsDetail({ id, readOnly }) {
           dragon && (
             <tr className={readOnly ? 'read-only' : ''}>
               <td>
-                <input type="text" name="name" value={dragon.name} onChange={handle} />
+                <input type="text" name="name" value={dragon.name} onChange={handle} {...disabled} />
               </td>
               <td>
-                <input type="text" name="type" value={dragon.type} onChange={handle} />
+                <input type="text" name="type" value={dragon.type} onChange={handle} {...disabled} />
               </td>
               <td>
                 <input type="text" name="createdAt" value={new Intl.DateTimeFormat(...dateOptions).format(new Date(dragon.createdAt || new Date()))} disabled />
