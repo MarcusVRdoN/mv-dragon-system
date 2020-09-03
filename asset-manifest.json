@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mv-dragon-system/static/css/main.c39f0e4d.chunk.css",
-    "main.js": "/mv-dragon-system/static/js/main.4237eeef.chunk.js",
-    "main.js.map": "/mv-dragon-system/static/js/main.4237eeef.chunk.js.map",
+    "main.js": "/mv-dragon-system/static/js/main.1af01114.chunk.js",
+    "main.js.map": "/mv-dragon-system/static/js/main.1af01114.chunk.js.map",
     "runtime-main.js": "/mv-dragon-system/static/js/runtime-main.3c6ec9da.js",
     "runtime-main.js.map": "/mv-dragon-system/static/js/runtime-main.3c6ec9da.js.map",
     "static/js/2.003085c9.chunk.js": "/mv-dragon-system/static/js/2.003085c9.chunk.js",
     "static/js/2.003085c9.chunk.js.map": "/mv-dragon-system/static/js/2.003085c9.chunk.js.map",
     "index.html": "/mv-dragon-system/index.html",
-    "precache-manifest.e85e765c3dd266130bbd941d4d5b463e.js": "/mv-dragon-system/precache-manifest.e85e765c3dd266130bbd941d4d5b463e.js",
+    "precache-manifest.86038ca555465d2e6c2da6549debc6b1.js": "/mv-dragon-system/precache-manifest.86038ca555465d2e6c2da6549debc6b1.js",
     "service-worker.js": "/mv-dragon-system/service-worker.js",
     "static/css/main.c39f0e4d.chunk.css.map": "/mv-dragon-system/static/css/main.c39f0e4d.chunk.css.map",
     "static/js/2.003085c9.chunk.js.LICENSE.txt": "/mv-dragon-system/static/js/2.003085c9.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3c6ec9da.js",
     "static/js/2.003085c9.chunk.js",
     "static/css/main.c39f0e4d.chunk.css",
-    "static/js/main.4237eeef.chunk.js"
+    "static/js/main.1af01114.chunk.js"
   ]
 }
